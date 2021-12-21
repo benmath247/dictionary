@@ -57,8 +57,6 @@
 <body>
     <div class="wrap">
         <div>
-
-            <h1><a href="{% url 'index' %}">Click to look up another word</a></h1>
             <h2>{{search}}</h2>
             <h3>Meaning: {{ meaning }}</h3>
             {% for synonym in synonyms %}
@@ -67,6 +65,7 @@
             {% for antonym in antonyms %}
             <h4>Antonym: {{ antonym }}</h4>
             {% endfor %}
+            <h5><a href="{% url 'index' %}">Click to look up another word</a></h5>
         </div>
     </div>
 </body>
